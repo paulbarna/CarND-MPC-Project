@@ -17,15 +17,15 @@ Within the cost function, for each iteration, I sum three components to reach th
 
 In order to avoid sudden spikes on the steering/acceleration I defined a tunable set of parameters to penalize the cost function:
 
-TunableParams[0] will penalise the cross track impact on the aggregate cost
-TunableParams[1] will penalise the heading error impact on the aggregate cost
-TunableParams[2] will penalise the velocity error impact on the aggregate cost
-TunableParams[3] will constrain the erratic control steering input
-TunableParams[4] will constrain the erratic control throttle input
-TunableParams[5] will influence the solver into keeping sequential steering values closer together
-TunableParams[6] will influence the solver into keeping sequential throttle values closer together
+* TunableParams[0] will penalise the cross track impact on the aggregate cost
+* TunableParams[1] will penalise the heading error impact on the aggregate cost
+* TunableParams[2] will penalise the velocity error impact on the aggregate cost
+* TunableParams[3] will constrain the erratic control steering input
+* TunableParams[4] will constrain the erratic control throttle input
+* TunableParams[5] will influence the solver into keeping sequential steering values closer together
+* TunableParams[6] will influence the solver into keeping sequential throttle values closer together
 
-TunableParams << 5.0, 0.25, 0.25, 400000, 30, 1, 0.01;
+  TunableParams << 5.0, 0.25, 0.25, 400000, 30, 1, 0.01;
 
 ## Timestep Length and Elapsed Duration (N & dt)
 N is the number of timesteps in the horizon. dt is how much time elapses between actuations.
